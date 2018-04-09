@@ -63,5 +63,11 @@ data.loc[:, "V1":"V4"]
 sns.lmplot("V1", "V2", data, hue="V5", legend_out=0)
 plt.suptitle("????...PLOT")
 plt.grid()
+
+#pd.plot.hist(data.loc[:, "V2"])
+#pd.DataFrame.plot.hist(data.loc[:, "V2"])
+#pd.plotting.scatter_matrix(data.loc[:, "V1":"V4"], diagonal="hist")
+#, col = "skyblue", xlab = "Sepal Lenght", main = 
+#     "Histogram of Sepal Lenght of Iris Data")
 plt.show()
 
