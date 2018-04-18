@@ -13,7 +13,8 @@
 # V4 = Petal Length
 # V5 = Group Classification(1, 2, 3)
 
-Summaries are generated here... Max, Min and Mean of Samples...
+Distributions are generated here... Standard Deviation, Variance within Group,
+Covariance within Groups, Coefficient of Correlation withing Group for all Samples...
 """
 # Francis Adepoju. March 31 - April 28 2018      
 # End of Module Project
@@ -55,8 +56,8 @@ data.V5 = data.V5.astype(str)
 #X = data.loc["V2":]      # Independent variables data
 X = data.V2                   # Independent variables data
 Y = data.V1                 # Dependent variable data
-print(data)
-print("Displaying Summary Statistics.... for data")
+#print(data)
+#print("Displaying Summary Statistics.... for data")
 
 
 # Means and Variances Per Group 
@@ -69,22 +70,23 @@ y = data.loc[:, "V5"]
 # Calculate the mean and standard deviations
 def printMeanAndSDByGroup(variables, groupVariable):
     data_groupby = variables.groupby(groupVariable)
-    print("## Means:")
+    #print("## Means:")
     display(data_groupby.apply(np.mean))
     print("\n## Standard Deviations:")
     display(data_groupby.apply(np.std))
-    print("\n## Sample Sizes:", len(data))
+    print("\n## Sample Sizes:")
 
     display(pd.DataFrame(data_groupby.apply(len)))
 
 #...Plot 6  = Calculating Summary Statistics
 printMeanAndSDByGroup(x, y)
-print("")
+#print("")
 #print ("Means for groups")
 #print(x.apply(np.mean))
+x.apply(np.mean)
 #print ("Variances for groups")
 #print(x.apply(np.std))
-"""
+print("")
 # Between-groups Variance and Within-groups Variance for a Variable
 def calcWithinGroupsVariance(variable, groupvariable):
     # find out how many values the group variable can take
@@ -109,10 +111,10 @@ def calcWithinGroupsVariance(variable, groupvariable):
     return vw
 
 
-#print("Variance within sesota     - GRP 1 is: ", calcWithinGroupsVariance(x.V1, y))   
-#print("Variance within versiculum - GRP 2 is: ", calcWithinGroupsVariance(x.V2, y))
-#print("Variance within seticulum  - GRP 3 is: ", calcWithinGroupsVariance(x.V3, y))
-#print("")
+print("Variance within sesota     - GRP 1 is: ", calcWithinGroupsVariance(x.V1, y))   
+print("Variance within versiculum - GRP 2 is: ", calcWithinGroupsVariance(x.V2, y))
+print("Variance within seticulum  - GRP 3 is: ", calcWithinGroupsVariance(x.V3, y))
+print("")
 
 def calcBetweenGroupsVariance(variable, groupvariable):
     # find out how many values the group variable can take
@@ -139,11 +141,11 @@ def calcBetweenGroupsVariance(variable, groupvariable):
     vb = numtotal / (numlevels - 1)
     return(vb)
 
-#print("Variance between sesota     - GRP 1 is: ", calcBetweenGroupsVariance(x.V1, y))   
-#print("Variance between versiculum - GRP 2 is: ", calcBetweenGroupsVariance(x.V2, y))
-#print("Variance between seticulum  - GRP 3 is: ", calcBetweenGroupsVariance(x.V3, y))
-#print("")
-
+print("Variance between sesota     - GRP 1 is: ", calcBetweenGroupsVariance(x.V1, y))   
+print("Variance between versiculum - GRP 2 is: ", calcBetweenGroupsVariance(x.V2, y))
+print("Variance between seticulum  - GRP 3 is: ", calcBetweenGroupsVariance(x.V3, y))
+print("")
+"""
 #Between-groups Covariance and Within-groups Covariance for Two Variables
 def calcWithinGroupsCovariance(variable1, variable2, groupvariable):
     levels = sorted(set(groupvariable))

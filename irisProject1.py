@@ -12,6 +12,7 @@ to view and then manipulate the dataset as needed.
 # Francis Adepoju. March 31 - April 28 2018      
 # End of Module Project
 # Investigating the Iris_flower_data_set
+# http://python-for-multivariate-analysis.readthedocs.io/   ....python book" 
 # http://archive.ics.uci.edu/ml/machine-learning-databases/iris/
 # https://en.wikipedia.org/wiki/Iris_flower_data_set
 # A script for plotting multivariate tabular data as gridded scatter plots.
