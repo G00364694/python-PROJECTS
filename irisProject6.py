@@ -105,6 +105,8 @@ def calcWithinGroupsVariance(variable, groupvariable):
     for leveli in levels:
         levelidata = variable[groupvariable==leveli]
         levelilength = len(levelidata)
+        print('Level= ', leveli)
+        print('Level Length= ', levelilength) 
         # get the standard deviation for group i:
         sdi = np.std(levelidata)
         numi = (levelilength)*sdi**2
@@ -133,6 +135,8 @@ def calcBetweenGroupsVariance(variable, groupvariable):
     for leveli in levels:
         levelidata = variable[groupvariable==leveli]
         levelilength = len(levelidata)
+        print('Level= ', leveli)
+        print('Level Length= ', levelilength)
         # get the mean and standard deviation for group i:
         meani = np.mean(levelidata)
         sdi = np.std(levelidata)
@@ -148,7 +152,7 @@ print("Variance between sesota     - GRP 1 is: ", calcBetweenGroupsVariance(x.V1
 print("Variance between versiculum - GRP 2 is: ", calcBetweenGroupsVariance(x.V2, y))
 print("Variance between seticulum  - GRP 3 is: ", calcBetweenGroupsVariance(x.V3, y))
 print("")
-
+"""
 #Between-groups Covariance and Within-groups Covariance for Two Variables
 def calcWithinGroupsCovariance(variable1, variable2, groupvariable):
     levels = sorted(set(groupvariable))
@@ -223,3 +227,5 @@ sns.heatmap(corrmat, vmax=1., square=False).xaxis.tick_top()
 plt.suptitle("HeatMAP")
 plt.grid()
 plt.show()
+
+"""
