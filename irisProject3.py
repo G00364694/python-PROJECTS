@@ -5,17 +5,17 @@
 # petal length, petal width, sepal length and sepal width. 
 # These values are listed with decimal places aligned, and 
 # with a space between the columns.
-# V1 = Sepal Width
-# V2 = Sepal Length
-# V3 = Petal Width
-# V4 = Petal Length
-# V5 = Group Classification(1, 2, 3)
+# H1 = Sepal Length
+# H2 = Sepal Width
+# H3 = Petal Length
+# H4 = Petal Width
+# H5 = Group Classification(1, 2, 3)
 
 An interesting observation from the next two plots confirms the existing observations on the 
 Iris data set. There is a marked separation between setosa whereas, there seem not to be much 
 separation among the versicolor and the virginica.
 This observation further confirms the Fishers' Linear Discriminant relationship experiments. 
-Explored Samples:(V2 vs V1) & (V4 vs V3)
+Explored Samples:(H1 vs H2) & (H3 vs H4)
 """
 # Francis Adepoju. March 31 - April 28 2018      
 # End of Module Project
@@ -25,23 +25,16 @@ Explored Samples:(V2 vs V1) & (V4 vs V3)
 # https://en.wikipedia.org/wiki/Iris_flower_data_set
 # A script for plotting multivariate tabular data as gridded scatter plots.
 
-#import pandas.plotting.scatter_matrix as pd2 and all necessary libraries for this analytics
-#import os
+#import all necessary libraries for this analytics
 import pandas as pd
-
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-#from sklearn.preprocessing import scale
-#from sklearn.decomposition import PCA
-#from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
-#from scipy import stats
-#from IPython.display import display, HTML
 
 np.set_printoptions(suppress=True)
 
-# number of max rows to print for a dataframe:
-DISPLAY_MAX_ROWS = 25
+# Sample number of rows to print for a dataframe [0 <= n <= 150]
+DISPLAY_MAX_ROWS = 40
 pd.set_option('display.max_rows', DISPLAY_MAX_ROWS)
 
 # Read in the data file from csv kept in /data directory
@@ -49,30 +42,26 @@ pd.set_option('display.max_rows', DISPLAY_MAX_ROWS)
 data = pd.read_csv('data/iris.csv', delimiter=',', header=None)   
 
 # Rename the columns to be similar to R naming convention for easy access...
-data.columns = [ "V"+str(i) for i in range(1, len(data.columns)+1) ]
-data.V5 = data.V5.astype(str)   # Column 5 holds the Group name as type string
-X = data.V2                     # Independent variables data
-Y = data.V1                     # Dependent variable data
-# Print pre-set array of data indicated by DISPLAY_MAX_ROWS in line 35
-#print(data)
-
-# Select data columns to matrix-match
-data.loc[:, "V1":"V4"]
+data.columns = [ "H"+str(i) for i in range(1, len(data.columns)+1) ]
+data.H5 = data.H5.astype(str)   # Column 5 holds the Group name as type string
+X = data.H2                     # Independent variables data
+Y = data.H1                     # Dependent variable data
 
 """
 An interesting observation of group clustering are revelaled in these two plots 
 of the Iris data set. The iris setosa are more closesly clustered and further from the other two 
 loosely compacted and closely related species -  the versicolor and the virginica.
 """
-
-sns.lmplot("V1", "V2", data, hue="V5", legend_out=0, fit_reg=False)
+# Plot H1 vs H2: Sepal Length vs Width, NO REGRESSION
+sns.lmplot("H1", "H2", data, hue="H5", legend_out=0, fit_reg=False)
 plt.set_cmap('inferno')
-plt.suptitle("Sepal Width vs. Sepal Length")
+plt.suptitle("Sepal Length vs. Sepal Width")
 plt.grid()
-sns.lmplot("V3", "V4", data, hue="V5", legend_out=0, fit_reg=False)
+# Plot H3 vs H4: Petal Length vs Width, NO REGRESSION
+sns.lmplot("H3", "H4", data, hue="H5", legend_out=0, fit_reg=False)
 plt.set_cmap('inferno')
-plt.suptitle("Petal Width vs. Petal Length")
+plt.suptitle("Petal Length vs. Petal Width")
 plt.grid()
-
+# Render the plots 
 plt.show()
 
