@@ -11,9 +11,11 @@
 # H4 = Petal Width
 # H5 = Group Classification(1, 2, 3)
 
-We now go ahead and view a matrix plot of the whole data set.
-This enables us to probe into the relationships that exists between data in a certain column 
-with respect to data in other columns of the data set.
+An interesting observation from the next two plots confirms the existing observations on the 
+Iris data set. There is a marked separation between setosa whereas, there seem not to be much 
+separation among the versicolor and the virginica.
+This observation further confirms the Fishers' Linear Discriminant relationship experiments. 
+Explored Samples:(H1 vs H2) & (H3 vs H4)
 """
 # Francis Adepoju. March 31 - April 28 2018      
 # End of Module Project
@@ -42,18 +44,22 @@ data = pd.read_csv('data/iris.csv', delimiter=',', header=None)
 # Rename the columns to be similar to R naming convention for easy access...
 data.columns = [ "H"+str(i) for i in range(1, len(data.columns)+1) ]
 data.H5 = data.H5.astype(str)   # Column 5 holds the Group name as type string
-#X = data.H2                     # Independent variables data
-#Y = data.H1                     # Dependent variable data
 
 """
-A histogram of the data distribution is shown along the diagonal axis.
-An interesting set of relationships are observed from this plots and some of them are further
-explored in subsequent analysis (H1 vs H2) & (H3 vs H4)
+An interesting observation of group clustering are revelaled in these two plots 
+of the Iris data set. The iris setosa are more closesly clustered and further from the other two 
+loosely compacted and closely related species -  the versicolor and the virginica.
 """
-# Select data columns to matrix-match
-pd.plotting.scatter_matrix(data.loc[:, "H1":"H4"], grid=True, diagonal="hist")
-# Add grid lines and Title to the plot
+# Plot H1 vs H2: Sepal Length vs Width, NO REGRESSION
+sns.lmplot("H1", "H2", data, hue="H5", legend_out=0, fit_reg=False)
+plt.set_cmap('inferno')
+plt.suptitle("Sepal Length vs. Sepal Width")
 plt.grid()
-plt.suptitle("Matrix ScatterPlot")
-#Show the plot
+# Plot H3 vs H4: Petal Length vs Width, NO REGRESSION
+sns.lmplot("H3", "H4", data, hue="H5", legend_out=0, fit_reg=False)
+plt.set_cmap('inferno')
+plt.suptitle("Petal Length vs. Petal Width")
+plt.grid()
+# Render the plots 
 plt.show()
+
