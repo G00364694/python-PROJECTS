@@ -1,8 +1,8 @@
 
 
-#52167 -- Programming and Scripting (End of Module Mini Project)
+# 52167 -- Programming and Scripting (End of Module Mini Project)
 
-#Topic: Investigating the Fisher's Iris data set
+# Topic: Investigating the Fisher's Iris data set
 
 ## Project Plan
   1.	Investigation of the problem and available solutions… References
