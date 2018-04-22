@@ -1,6 +1,6 @@
 
 
-# 52167 -- Programming and Scripting (End of Module Mini Project)
+# 52167 -- Programming and Scripting (End of Semester Project)
 
 # Topic: Investigating the Fisher's Iris data set
 
