@@ -31,7 +31,7 @@ Currently, The Irish Flower analysis program consists of 6 sets of code and 9 ou
 ## Running the programs
 1. Ensure that the iris-flower dataset is stored in the data directory in the project folder as a .csv file
 2. Instantiate python (ipython) and run the python scripts shown above one afer the other.
-3. Note that the codes may be run in any order. Each python script is self contained and are doing specific function.
+3. Note that the codes may be run in any order. Each python script is self contained and are performing specific function.
 
 ## Statistical classification
 In machine learning and statistics, classification is the problem of identifying to which of a set of categories (sub-populations) a new observation belongs, on the basis of a training set of data containing observations (or instances) whose category membership is known. Classification is an example of pattern recognition.
