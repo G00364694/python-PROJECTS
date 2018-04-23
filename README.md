@@ -59,7 +59,7 @@ Based on Fisher's linear discriminant model, this data set became a typical test
 Sepal is a part of the flowering plants. Usually green, sepals typically function as protection for the flower in bud, and often as support for the petals when in bloom.
 Petals are modified leaves that surround the reproductive parts of flowers. They are often brightly colored or unusually shaped to attract pollinators. Together, all of the petals of a flower are called a corolla. As mentioned above, Petals are usually accompanied by another set of special leaves called sepals. Collectively, Sepals and Petals are called calyx. [5] 
 
-### (flowerPIC.png)
+### (flowerPICTURE.png)
 The Iris dataset employed in this project is the same used in R.A. Fisher's classic 1936 paper, “The Use of Multiple Measurements in Taxonomic Problems”, and can also be found on the UCI Machine Learning Repository. [6] 
 
 ## Data analysis 
