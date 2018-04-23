@@ -74,5 +74,51 @@ A measure of central tendency is a single value that attempts to describe a set 
 The mean, median and mode are all valid measures of central tendency, but under different conditions, some measures of central tendency become more appropriate to use than others.[7]
 The mean (or average) is the most popular and well known measure of central tendency. It can be used with both discrete and continuous data, although its use is most often with continuous data (see our Types of Variable guide for data types). The mean is equal to the sum of all the values in the data set divided by the number of values in the data set. So, if we have n values in a data set and they have values x1, x2, ..., xn, the sample mean, usually denoted by   (pronounced x bar), is:
 
+#### (all formulae available in .docx REPORT)	
+
+### Standard Deviation(SD)
+Standard deviation is a measure of the dispersion of a set of data from its mean. It is calculated as the square root of variance by determining the variation between each data point relative to the mean. If the data points are further from the mean, there is higher deviation within the data set.
+
+In statistics, the standard deviation (SD), also represented by the Greek letter sigma σ or the Latin letter s) is a measure that is used to quantify the amount of variation or dispersion of a set of data values.[1] A low standard deviation indicates that the data points tend to be close to the mean (also called the expected value) of the set, while a high standard deviation indicates that the data points are spread out over a wider range of values. [8]
+
+### Variance
+Variance is a measurement of the spread between numbers in a data set. The variance measures how far each number in the set is from the mean. Variance is calculated by taking the differences between each number in the set and the mean, squaring the differences (to make them positive) and dividing the sum of the squares by the number of values in the set.
+
+### Covariance
+In probability theory and statistics, covariance is a measure of the joint variability of two random variables. If the greater values of one variable mainly correspond with the greater values of the other variable, and the same holds for the lesser values, (i.e., the variables tend to show similar behaviour), the covariance is positive. In the opposite case, when the greater values of one variable mainly correspond to the lesser values of the other, (i.e., the variables tend to show opposite behaviour), the covariance is negative. The sign of the covariance therefore shows the tendency in the linear relationship between the variables. The magnitude of the covariance is not easy to interpret because it is not normalized and hence depends on the magnitudes of the variables. The normalized version of the covariance, the correlation coefficient, however, shows by its magnitude the strength of the linear relation.
+When an analyst has a set of data, a pair of x and y values, covariance can be calculated using five variables from that data. They are:
+  •	xi = a given x value in the data set
+  •	xm = the mean, or average, of the x values
+  •	yi = the y value in the data set that corresponds with xi
+  •	ym = the mean, or average, of the y values
+  •	n = the number of data points
+Given this information, the formula for covariance is: 
+cov(x, y) = SUM [(xi - xm) * (yi - ym)] / (n - 1)
+
+###  Coefficient of correlation
+It's important to note that while the covariance does measure the directional relationship between two assets, it does not show the strength of the relationship between the two assets. The coefficient of correlation is a more appropriate indicator of this strength. [10] 
+The correlation coefficient is a measure that determines the degree to which two variables' movements are associated. The range of values for the correlation coefficient is -1.0 to 1.0. If a calculated correlation is greater than 1.0 or less than -1.0, a mistake has been made. A correlation of -1.0 indicates a perfect negative correlation, while a correlation of 1.0 indicates a perfect positive correlation.[11] 
+A value of exactly 1.0 means there is a perfect positive relationship between the two variables. For a positive increase in one variable, there is also a positive increase in the second variable. A value of exactly -1.0 means there is a perfect negative relationship between the two variables. This shows the variables move in opposite directions; for a positive increase in one variable, there is a decrease in the second variable. If the correlation is 0, this simply means there is no relationship between the two variables. The strength of the relationship varies in degree based on the value of the correlation coefficient. For example, a value of 0.2 indicates there is a positive relationship between the two variables, but it is weak.
+[12] 
+
+## References
+[1] Alpaydin, Ethem (2010). Introduction to Machine Learning. MIT Press. p. 9. ISBN 978-0-262-01243-0.
+[2] https://en.wikipedia.org/wiki/Iris_flower_data_set
+[3] https://en.wikipedia.org/wiki/Linear_discriminant_analysis  
+[4] "UCI Machine Learning Repository: Iris Data Set". archive.ics.uci.edu. Retrieved 2017-12-01.
+[5] https://en.wikipedia.org/wiki/Petal 
+[6] https://www.kaggle.com/danalexandru/simple-analysis-of-iris-dataset/data
+[7] https://statistics.laerd.com/statistical-guides/measures-central-tendency-mean-mode-median.php
+[8]  https://en.wikipedia.org/wiki/Standard_deviation
+[9]  https://www.investopedia.com/terms/v/variance.asp#ixzz5CD9YFbDY 
+[10]  https://www.investopedia.com/terms/c/covariance.asp#ixzz5CDB09twT 
+[11]  https://www.investopedia.com/terms/c/correlationcoefficient.asp#ixzz5CDBxj8nW 
+[12]  https://www.investopedia.com/terms/c/correlationcoefficient.asp#ixzz5CDCL7hPv 
+[13] http://academic.bancey.com/plotting-multivariate-data-with-matplotlibpylab-edgar-andersons-iris-flower-data-set/      
+[14] http://python-for-multivariate-analysis.readthedocs.io/                                ---python book"                                                               
+
+
+
+
  
 
