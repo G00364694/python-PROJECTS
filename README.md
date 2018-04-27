@@ -9,7 +9,12 @@
   2.	Writing the Python code to implement the solution
   3.	Documentation and explanations, including comments and README
   
-#  ...(FULL report included - fullREPORT.docx)...  
+#  ...(FULL report included - fullREPORT.docx)... 
+## My Observation: (REF: summaryOutput.txt)
+•         a high positive correlation between PetalWidth and PetalLength    (0.96)
+•         a high positive correlation between PetalLength and SepalLength  (0.87)
+•         a high positive correlation between PetalWidth and SepalLength    (0.81)
+
 
 ## python-PROJECTS
 This repository contains the project files for 52167 -- PROGRAMMING AND SCRIPTING.
